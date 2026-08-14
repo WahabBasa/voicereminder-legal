@@ -33,30 +33,24 @@
 <p>This is the part worth reading closely, because it's the only time your data leaves your phone. When you record a reminder:</p>
 <ol class="steps">
   <li>The recording is uploaded to our backend over an encrypted connection.</li>
-  <li>It's sent to <strong>our speech-to-text provider</strong>, which turns the audio into text.</li>
-  <li>That text goes to <strong>our AI language-processing provider</strong>, which works out the actual reminder &mdash; what it's about, when it should fire, whether it repeats.</li>
-  <li>The finished reminder wording is sent to <strong>our voice-synthesis provider</strong>, which produces the spoken audio your alarm plays.</li>
+  <li>The audio is turned into text.</li>
+  <li>That text is interpreted to work out the actual reminder &mdash; what it's about, when it should fire, whether it repeats.</li>
+  <li>The finished reminder wording is turned into the spoken audio your alarm plays.</li>
   <li>Your original recording is then deleted from our backend. The reminder text and the generated audio stay, because the app needs them to remind you.</li>
 </ol>
-<p>Because this sends your voice to third-party AI services, the app asks for your explicit permission before your first recording and won't record until you agree. You can withdraw that permission at any time in <strong>Settings</strong>; reminders you've already made keep working, and the app will ask again before it records anything new. You can also skip voice entirely and type reminders by hand.</p>
+<p>Some of these steps run on specialised processing services working on our behalf &mdash; they act only on our instructions, perform only the step described, and are never permitted to use your data for their own purposes (more in section 5).</p>
+<p>Because your voice is processed outside your phone, the app asks for your explicit permission before your first recording and won't record until you agree. You can withdraw that permission at any time in <strong>Settings</strong>; reminders you've already made keep working, and the app will ask again before it records anything new. You can also skip voice entirely and type reminders by hand.</p>
 
 <h2>4. Why we're allowed to process it (legal bases)</h2>
 <ul>
-  <li><strong>Your consent</strong> &mdash; for sending voice recordings and reminder text to the AI services above. Freely given, and withdrawable in Settings.</li>
+  <li><strong>Your consent</strong> &mdash; for processing your voice recordings as described in section 3. Freely given, and withdrawable in Settings.</li>
   <li><strong>Performance of a contract</strong> &mdash; storing your reminders and delivering alarms is the service you asked for, and managing a Pro subscription is part of it.</li>
   <li><strong>Our legitimate interests</strong> &mdash; keeping the app stable and secure, which is what the crash reports are for.</li>
 </ul>
 
 <h2>5. Who we share your data with</h2>
-<p>We do not sell your data, and we never share it for advertising. We share only what a specific job requires, with service providers who process it on our instructions:</p>
-<ul>
-  <li><strong>Our speech-to-text provider</strong> &mdash; receives the voice recording, returns text.</li>
-  <li><strong>Our AI language-processing provider</strong> &mdash; receives the transcribed text, returns a structured reminder.</li>
-  <li><strong>Our voice-synthesis provider</strong> &mdash; receives the reminder wording, returns spoken audio.</li>
-  <li><strong>Our backend and storage provider</strong> &mdash; hosts the reminder text and audio files described above.</li>
-  <li><strong>Our error-monitoring service</strong> &mdash; receives crash and error reports.</li>
-  <li><strong>Our subscription-management service</strong> &mdash; receives an anonymous identifier and your purchase status.</li>
-</ul>
+<p><strong>We do not sell your personal data.</strong> We never share it for advertising, and nobody receives it for their own use &mdash; not to train their models, not to build profiles, not for anything of theirs.</p>
+<p>Like nearly every app, we rely on a small number of trusted service providers to run the machinery behind VoiceReminder: the speech-to-text, reminder-interpretation, and voice-generation steps described in section 3, plus hosting and storage, crash reporting, and subscription management. Each processes data strictly on our behalf and on our instructions, sees only what its specific job requires, is contractually bound to protect it, and is prohibited from using it for any purpose of its own.</p>
 <p>Purchases themselves are handled entirely by <strong>Apple</strong> through the App Store. Apple processes the payment; we never see your card details, billing address, or Apple Account credentials.</p>
 <p>These providers operate in various countries, so your data may be processed outside the country you live in. Where that involves a transfer out of the UK or EEA, we rely on the safeguards those providers have in place, such as standard contractual clauses. We may also disclose data if the law genuinely requires it.</p>
 
@@ -75,6 +69,7 @@
   <li>We don't run ads, and there are no advertising or analytics trackers in the app.</li>
   <li>We don't collect your location, contacts, photos, or health records.</li>
   <li>We don't build a profile of you or use your reminders to target you with anything.</li>
+  <li>We don't let anyone else use your data for their own purposes &mdash; the services that help run the app work for us, under contract, and that's the whole relationship.</li>
   <li>We don't record in the background &mdash; only while the recorder is open.</li>
 </ul>
 
