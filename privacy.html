@@ -33,11 +33,11 @@
 <h2>3. How your voice becomes a reminder</h2>
 <p>This is the part worth reading closely: it's the only moment anything of yours leaves the phone, and it's a short one. When you record a reminder:</p>
 <ol class="steps">
-  <li>The recording is uploaded to our backend over an encrypted connection.</li>
-  <li>The audio is turned into text. Your phone does this itself whenever it can, right on the device; only when it can't produce a transcript on its own does your recording go to OpenAI to be turned into text.</li>
+  <li>Your phone tries to turn the recording into text itself, on the device. When it can, the recording never leaves your phone.</li>
+  <li>When it can't, the recording is sent over an encrypted connection to OpenAI to be turned into text, and is deleted once that's done.</li>
   <li>That text is interpreted to work out the actual reminder &mdash; what it's about, when it should fire, whether it repeats.</li>
   <li>The finished reminder wording is turned into the spoken audio your alarm plays.</li>
-  <li>Your original recording is then deleted from our backend. The reminder text and the generated audio stay, because the app needs them to remind you.</li>
+  <li>If the recording was sent, it is deleted at this point. The reminder text and the generated audio stay, because the app needs them to remind you.</li>
 </ol>
 <p>Transcription (when your phone can't do it) and understanding happen at OpenAI. Your reminders and their audio are stored on Convex, our backend.</p>
 <p>Because that work happens off your phone, the app asks for your explicit permission before your first recording and won't record until you agree. You stay in charge of it: you can stop at any time by turning off microphone access for VoiceReminder in your device's <strong>Settings</strong> &mdash; nothing further is recorded or processed from that moment, and reminders you've already made keep working. You can also skip voice entirely and type reminders by hand.</p>
