@@ -34,7 +34,7 @@
 <p>This is the part worth reading closely: it's the only moment anything of yours leaves the phone, and it's a short one. When you record a reminder:</p>
 <ol class="steps">
   <li>The recording is uploaded to our backend over an encrypted connection.</li>
-  <li>The audio is turned into text. Your phone does this itself whenever it can, right on the device; only when it can't produce a transcript on its own does your recording go to our speech provider (OpenAI, via OpenRouter &mdash; see section 5) to be turned into text.</li>
+  <li>The audio is turned into text. Your phone does this itself whenever it can, right on the device; only when it can't produce a transcript on its own does your recording go to our speech provider (OpenAI &mdash; see section 5) to be turned into text.</li>
   <li>That text is interpreted to work out the actual reminder &mdash; what it's about, when it should fire, whether it repeats.</li>
   <li>The finished reminder wording is turned into the spoken audio your alarm plays.</li>
   <li>Your original recording is then deleted from our backend. The reminder text and the generated audio stay, because the app needs them to remind you.</li>
@@ -53,15 +53,15 @@
 <p><strong>We do not sell your personal data.</strong> We never share it for advertising, and nobody receives it for their own use &mdash; not to train their models, not to build profiles, not for anything of theirs.</p>
 <p>Like nearly every app, VoiceReminder is delivered with the help of a small number of trusted providers. Each of them processes data on our behalf and on our instructions, and only for the one job it does for us:</p>
 <ul>
-  <li><strong>Speech recognition</strong> &mdash; OpenAI (via OpenRouter), only when your phone can't transcribe on its own; turns your recording into text.</li>
-  <li><strong>Language understanding</strong> &mdash; OpenAI (via OpenRouter); works out what the reminder is about and when it should fire, from the transcript and reminder text.</li>
-  <li><strong>Voice generation</strong> &mdash; ElevenLabs; produces the spoken reminder your alarm plays, from the reminder's text only &mdash; no recording of you is ever sent to it.</li>
-  <li><strong>Hosting and storage</strong> &mdash; Convex; keeps your reminders and their audio available to your device.</li>
-  <li><strong>Error monitoring</strong> &mdash; Sentry; tells us when something in the app breaks.</li>
-  <li><strong>Subscription management</strong> &mdash; RevenueCat; records whether Pro is active on your install.</li>
-  <li><strong>Email delivery</strong> &mdash; Resend; sends the feedback you write to the developer.</li>
+  <li><strong>Speech recognition</strong> &mdash; OpenAI, only when your phone can't transcribe on its own; turns your recording into text.</li>
+  <li><strong>Language understanding</strong> &mdash; OpenAI; works out what the reminder is about and when it should fire, from the transcript and reminder text.</li>
+  <li><strong>Voice generation</strong> &mdash; Speechify; produces the spoken reminder your alarm plays, from the reminder's text only &mdash; no recording of you is ever sent to it.</li>
+  <li><strong>Hosting and storage</strong> &mdash; to keep your reminders and their audio available to your device.</li>
+  <li><strong>Error monitoring</strong> &mdash; to tell us when something in the app breaks.</li>
+  <li><strong>Subscription management</strong> &mdash; to record whether Pro is active on your install.</li>
+  <li><strong>Email delivery</strong> &mdash; to send the feedback you write to the developer.</li>
 </ul>
-<p>OpenRouter only relays these requests to OpenAI and does not keep your data. OpenAI does not use data sent through its API to train its own models, and ElevenLabs receives only the reminder's text &mdash; used to generate that one audio clip and for nothing else of its own.</p>
+<p>OpenAI does not use data sent through its API to train its models.</p>
 <p>Each one sees only what its own job requires, is contractually bound to protect it, and is prohibited from using it for any purpose of its own. We pass on the smallest amount of data that lets each step work, and nothing beyond it.</p>
 <p>Purchases themselves are handled entirely by <strong>Apple</strong> through the App Store. Apple processes the payment; we never see your card details, billing address, or Apple Account credentials.</p>
 <p>Some of these providers operate outside the country you live in. Where that means a transfer out of the UK or EEA, we only work with providers that keep recognised safeguards in place for it &mdash; standard contractual clauses approved by the European Commission, or an equivalent protection. We may also disclose data where the law genuinely requires it.</p>
